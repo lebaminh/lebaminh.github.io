@@ -29,7 +29,7 @@ body{
     float: left;
 }
 
-#avatar > img {
+#avatar > a > img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
