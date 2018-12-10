@@ -17,8 +17,24 @@
     width: 100%;
 }
 
+#menu{
+    font-size: 36px;
+    background-color: burlywood;
+    text-align: center;  
+}
+
+#menu > ul > li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+#main {
+    padding: 5px;
+    text-align: justify;
+}
 .picture_wrap{
-    float: left;
+    display: inline-block;
     width: 33%;
     border: 3px solid #000000;
     margin-bottom: 5px;
