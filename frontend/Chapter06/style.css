@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    background-color: blueviolet;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    animation: title 10s ease-in-out infinite;
+}
+
+#main{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#main > #container {
+    text-align: center;
+}
+
+#main > #container > .wrap {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 4px;
+    margin: 5px;
+    width: 32%;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+#main > #container > .wrap > img{
+    width: 100%;
+    height: 300px;
+    transition: all 0.5s ease-in-out;
+}
+
+#main > #container > .wrap:nth-child(odd):hover{
+    transform: translate(0, -10px);
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(44, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 5px 0px rgba(44, 50, 50, 0.75);
+    box-shadow:         7px 7px 5px 0px rgba(44, 50, 50, 0.75);
+}
+
+#main > #container > .wrap:nth-child(even):hover > img{
+    transform: scale(1.2)
+}
+
+#sign{
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: -100px;
+    opacity: 1;
+    position: relative;
+    animation: signAnimation 5s infinite ease-in-out;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+@keyframes signAnimation{
+    0%   {right: 0px ; opacity: 0;}
+    20%  {right: 150px; opacity: 1;}
+    50%  {right: 150px; opacity: 1;}
+    80%  {opacity: 1;}
+    100% {right: 700px; opacity: 0;}
+}
+
+@keyframes title{
+    0% {color: #ffffff; background-color: blueviolet}
+    25% {color: green; background-color: orangered}
+    50% {color: yellow; background-color: green}
+    100% {color: black; background-color: cadetblue}
+}
+
