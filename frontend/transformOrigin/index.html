@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform Origin</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="hinhvuong"></div>
+    <div id="kedoc" class="ke"></div>
+    <div id="kengang" class="ke"></div>
+    <div id="hinhvuongTransform"></div>
+  </div>
+
+  <div id="button_group">
+    <button onclick="reset()">None Transform</button>
+    <button onclick="center()">Center - Center</button>
+    <button onclick="leftTop()">Left - Top</button>
+    <button onclick="leftBottom()">Left - Bottom</button>
+    <button onclick="leftCenter()">Left - Center</button>
+    <button onclick="rightTop()">Right - Top</button>
+    <button onclick="rightBottom()">Right - Bottom</button>
+    <button onclick="rightCenter()">Right - Center</button>
+  </div>
+</body>
+  <script>
+    let hv = document.getElementById('hinhvuongTransform');
+    
+    reset = () => {
+      resetTransform()
+      hv.classList.remove('transform')
+    }
+
+    center = () => {
+      resetTransform()
+    }
+
+    leftTop = () => {
+      resetTransform()
+      hv.classList.add('transformOriginLT')
+    }
+
+    leftBottom = () => {
+      resetTransform()
+      hv.classList.add('transformOriginLB')
+    }
+
+    leftCenter = () => {
+      resetTransform()
+      hv.classList.add('transformOriginLC')
+    }
+
+    leftTop = () => {
+      resetTransform()
+      hv.classList.add('transformOriginLT')
+    }
+
+    rightTop = () => {
+      resetTransform()
+      hv.classList.add('transformOriginRT')
+    }
+
+    rightBottom = () => {
+      resetTransform()
+      hv.classList.add('transformOriginRB')
+    }
+
+    rightCenter = () => {
+      resetTransform()
+      hv.classList.add('transformOriginRC')
+    }
+
+    resetTransform = () => {
+      hv.classList.add('transform')
+      hv.classList.remove('transformOriginLT', 'transformOriginLB', 'transformOriginLC', 'transformOriginRT', 'transformOriginRB', 'transformOriginRC')
+    }
+  </script>
+</html>

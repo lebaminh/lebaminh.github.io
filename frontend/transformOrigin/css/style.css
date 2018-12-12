@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrap{
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  top: 100px;
+  text-align: center;
+  border: 1px solid greenyellow;
+  position: relative;
+}
+
+#hinhvuong{
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.ke{
+  position: absolute;
+  border: 1px dotted blue;
+}
+
+#kedoc{
+  width: 0;
+  height: 400px;
+  left: 50%;
+}
+
+#kengang{
+  width: 400px;
+  height: 0;
+  top: 50%;
+}
+
+#hinhvuongTransform{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background-color: blueviolet;
+  z-index: 5;
+}
+
+#button_group{
+  margin-top: 150px;
+  text-align: center;
+}
+
+button{
+  padding: 10px 20px;
+}
+
+.transform{
+  transform: rotate(45deg);
+}
+
+.transformOriginLT{
+  transform-origin: left top; 
+}
+
+.transformOriginLB{
+  transform-origin: left bottom; 
+}
+
+.transformOriginLC{
+  transform-origin: left center; 
+}
+
+.transformOriginRT{
+  transform-origin: right top; 
+}
+
+.transformOriginRB{
+  transform-origin: right bottom; 
+}
+
+.transformOriginRC{
+  transform-origin: right center; 
+}
