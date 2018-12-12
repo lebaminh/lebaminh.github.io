@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("./images/background.png")
+}
+
+#main{
+    width: 70%;
+    min-height: 700px;
+    background-color: #000000;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 30px;
+    border: 3px solid #ffffff;
+    -webkit-box-shadow: 9px 2px 50px 25px rgba(255,255,255,0.47); 
+    box-shadow: 9px 2px 50px 25px rgba(255,255,255,0.47);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: #ffffff;
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 4em;
+    font-family: fantasy;
+    text-shadow: 0px 0px 8px rgba(255,65,185,1);
+}
+
+.wire {
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid #444444;
+    height: 100px;
+    top: 10px;
+}
+
+.wire li {
+    list-style: none;
+    margin: 0 15px;
+    display: inline-block;
+    width: 15px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    animation: even-flash 1s ease-in-out infinite;
+    position: relative;
+}
+
+.wire li::before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 10px;
+    background-color: #444444;
+    border-radius: 4px;
+    top: -5px;
+    left: 0;
+}
+
+.wire li:nth-child(odd) {
+    animation-name: odd-flash
+}
+
+#ongia{
+  transform: scale(-0.8,0.8);
+  position: absolute;
+  left: -1000px;
+  animation: santaAnimate 5s ease-in 1s;
+}
+
+#caythong{
+    width: 400px;
+    height: 320px;   
+    position: absolute;
+    top: 270px;
+    right: 15px;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+}
+
+#santa{
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    animation-delay: 7s;
+    animation-iteration-count: 1;
+}
+
+#loichuc{
+    font-size: 3em;
+    font-family: fantasy;
+    text-shadow: 0px 0px 8px rgba(255,65,185,1);
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    letter-spacing: 0.2em;
+    animation-delay: 9s;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+audio{
+    display: block;
+    margin: auto;
+}
+
+@keyframes even-flash {
+    0%, 100% {
+        background: rgba(255, 230, 65, 1);
+        box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 1);
+    }
+    50% {
+        background: rgba(255, 230, 65, 0.5);
+        box-shadow: 0px 2px 20px 4px rgba(255, 230, 65, 0.3);
+    }
+}
+
+@keyframes odd-flash {
+    50% {
+        background: rgba(255, 65, 185, 1);
+        box-shadow: 0px 2px 20px 4px rgba(255, 65, 185, 1);
+    }
+    0%, 100% {
+        background: rgba(255, 65, 185, 0.5);
+        box-shadow: 0px 2px 20px 4px rgba(255, 65, 185, 0.3);
+    }
+}
+
+@keyframes santaAnimate{
+    0%{
+        left: -1000px;
+    }
+    100% {
+        left: 1500px;
+    }
+}
