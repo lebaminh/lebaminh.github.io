@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    margin: 0;
+    p{
+        padding: 0;
+    }
+}
+
+@for $i from 1 to 5 {
+    h#{$i} {
+        font-size: 10px;
+    }
+}

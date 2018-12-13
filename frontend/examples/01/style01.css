@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.layout{
+    position: relative;
+    width: 100%;
+    background-color: yellowgreen;
+}
+
+.layout::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.menu{
+    width: 20%;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.content{
+    width: 300px;
+    background-color: brown;
+}
+
+#menu1{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#content1{
+    width: 80%;
+    top: 0;
+    left: 20%;
+    position: absolute;
+}
+
+#content1 div{
+    height: 3000px;
+}
