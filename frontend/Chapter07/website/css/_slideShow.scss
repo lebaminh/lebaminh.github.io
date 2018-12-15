@@ -1,3 +1,80 @@
-@mixin slideShow {
-    
+#slideShow{
+  position: relative;
+  img{
+    width: 100%;
+    height: auto;
+    max-height: 888px;
+    display: block;
+  }
+
+  .arrow{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+
+  #arrowLeft{
+    left: $slideShow-ArrowButtonMargin;
+  }
+
+  #arrowRight{
+    right: $slideShow-ArrowButtonMargin;
+  }
+
+  .fa-chevron-circle-right, .fa-chevron-circle-left{
+    font-size: 40px;
+    color: $navbar-redLink;
+  }
+
+  #logo2{
+    width: 600px;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .books-group{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 130px;
+    button{
+      padding: 15px 20px;
+      text-transform: uppercase;
+      margin: 0 50px;
+      font: {
+        family: 'Open Sans', sans-serif;
+        size: $slideShow-booksButtonFontSize;
+      }
+      border: 1px solid #ffffff;
+      background-color: transparent;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.7s;
+      &:hover{
+        background-color: #000000;
+      }
+    }
+  }
+
+  #arrowDown{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    .fa-chevron-circle-down{
+      font-size: 60px;
+      color: #9DBCA3;
+      cursor: pointer;
+      transition: color 0.7s;
+      &:hover{
+        color: #B42B2F;
+      }
+    }
+  }
 }

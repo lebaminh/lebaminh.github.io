@@ -48,7 +48,7 @@ body{
 #nav_horizontal > ul > li ul{
     position: absolute;
     display: none;
-    min-width: 300px;
+    white-space: nowrap;
     margin-top: -1px;
     z-index: 1000;
 }
