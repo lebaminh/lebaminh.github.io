@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex Box</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .flex-container {
+      display: flex;
+      background-color: DodgerBlue;
+      width: 500px;
+    }
+    
+    .flex-container > div {
+      background-color: #f1f1f1;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+      border: 1px solid #000000;
+    }
+    /* flex */
+    .flex-container > div{
+      flex: 1;
+    }
+    /* flex-grow */
+    .flex-container > div:nth-of-type(2) {
+      flex-grow: 3;
+    }
+    /* flex-shrink flex-basis*/
+    .flex-container > div:nth-of-type(2) {
+      flex-shrink: 3;
+      flex-basis: 100px;
+    }
+    /* ưu tiên: flex-grow -> flex -> flex-basic -> flex-shrink */
+
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+</html>
