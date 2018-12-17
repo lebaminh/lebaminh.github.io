@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS function</title>
+</head>
+<body>
+    <script>
+        let bai1 = x => x*x
+        
+        let bai2 = (a,b,c) => binhphuong(3*a + 2*b - c)
+        
+        let bai3 = str => {
+            let length = str.length
+            if(length <= 10) {
+                return str + '...'
+            } else{
+                return str.slice(0,10) + '...'
+            }
+        }
+
+        let bai4 = str =>{
+            var firstChar = str.charAt(0)
+            return firstChar.toUpperCase() + str.slice(1)
+        }
+
+        let bai5 = arrayNumber => {
+            let min = arrayNumber[0]
+            arrayNumber.forEach(value => {
+                if(value < min) min = value
+            });
+            return min;
+        }
+
+        function person(firstnName, lastName, age){
+            this.firstnName = firstnName
+            this.lastName = lastName
+            this.age = age
+            this.say = function() {
+                document.write('<h1>Ten toi la: '+this.firstnName+' '+this.lastName+'. Nam nay toi '+this.age+' tuoi</h1>')
+            }
+        }
+        
+        let bai6 = () => {
+            var teacher = new person('Le Ba', 'Minh1', 26)
+            var student = new person('Le Ba', 'Minh2', 26)
+            var parent = new person('Le Ba', 'Minh3', 26)
+
+            teacher.say()
+            student.say()
+            parent.say()
+        }
+        
+        aboutMe();
+    </script>
+</body>
+</html>

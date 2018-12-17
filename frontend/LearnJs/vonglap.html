@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bai1 = n => {
+            let result = 1
+            while (n>0){
+                result *= n
+                n--
+            }
+            return result
+        }    
+        
+        let bai2 = str => {
+            let strArr = str.split('')
+            let arrTemp = []
+            for(let i=strArr.length; i>=0; i--) {
+                arrTemp.push(strArr[i])
+            }
+            return arrTemp.join('')
+        }
+
+        let bai3 = str => {
+            let i = 0
+            let result = ''
+            while(i < 10) {
+                result += '-' + str
+                i++
+            }
+            return result.substr(1)
+        }
+
+        let bai4 = arrayStudents => {
+            let sortStudents = arrayStudents.sort()
+            var results =''
+            for(let key in sortStudents) {
+                let stt = parseInt(key) + 1
+                results += '<div>STT: '+ stt + ', Name: '+ sortStudents[key] +'</div>'
+            }
+            document.write(results)
+        }
+
+        bai4(['minh', 'trang', 'tinh', 'phu'])
+
+        let bai5 = array => array.map(value => value*2)
+        console.log(bai5([1,2,3]))
+
+        let bai6 = array => array.map(value => value %2 )
+        console.log(bai6([1,2,3]))
+
+    </script>
+</body>
+</html>
