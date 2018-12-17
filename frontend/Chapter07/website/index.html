@@ -1,20 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Restaurant</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <!-- Navbar -->
-    <div id="navbar"></div>
+    <div id="navbar">
+        <ul>
+            <li id="logo"><a href="">
+                    <img src="images/logo.png" alt="Logo" id="logo">
+                </a></li>
+            <li><a href="">About</a></li>
+            <li>
+                <a href="">Menu</a>
+                <i class="fa fa-caret-down down"></i>
+                <ul>
+                    <li><a href="">main menu</a></li>
+                    <li><a href="">main menu</a></li>
+                    <li><a href="">feature menu</a></li>
+                    <li><a href="">cluten free menu</a></li>
+                    <li><a href="">wine menu</a></li>
+                </ul>
+            </li>
+            <li><a href="">Event</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Social club</a></li>
+            <li><a href="">reservations</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="" id="redLink">grap & go</a></li>
+        </ul>
+    </div>
     <!-- SlideShow -->
-    <div id="slideShow"></div>
+    <div id="slideShow">
+        <img src="./images/slideShow.jpg" alt="SlideShow" />
+        <div class='arrow' id="arrowLeft">
+            <i class="fas fa-chevron-circle-left"></i>
+        </div>
+        <div class='arrow' id="arrowRight">
+            <i class="fas fa-chevron-circle-right"></i>
+        </div>
+        <img src="./images/family.png" alt="logo2" id="logo2" />
+        <div class="books-group">
+            <button>book online</button>
+            <button>view the menus</button>
+            <button>take out</button>
+        </div>
+        <div id="arrowDown">
+            <i class="fas fa-chevron-circle-down"></i>
+        </div>
+    </div>
     <!-- Main Content -->
-    <div id="content"></div>
+    <div id="content">
+        <div id="imgBlur"></div>
+        <div id="chef-menu">
+            <img src="./images/chef-menu.png" alt="chef-menu">
+            <ul>
+                <li><a href="">dinner</a></li>
+                <li><a href="">lunch</a></li>
+                <li><a href="">nonnas</a></li>
+                <li><a href="">wine</a></li>
+                <li><a href="">gluten free</a></li>
+                <li><a href="">takeout</a></li>
+                <li><a href="">seasonal feature</a></li>
+                <li><a href="">dessert</a></li>
+            </ul>
+        </div>
+        
+        <div id="advertisement">
+            <div id="info">
+                <img src="./images/info.png" alt="advertisement info" />
+                <span>
+                    Join now and receive
+Members Only Benefits. Social Club activities include priority invites to tastings, food and wine events & launches.
+                </span>
+            </div>
+            <a href="">join</a>
+        </div>
+
+        <div id="address">
+            <img src="./images/hours.png" alt="address" />
+            <div id="schedules">
+                <a href="">
+                    <img src="./images/retina-marker.png" alt="marker" />
+                    650 Richmond St. London, ON<br/>N6A 3G6  ·  519-438-4343 
+                </a>
+                <span>
+                    Mon - Tues: 11:30AM - 9PM<br/>
+                    Wed - Thu: 11:30AM - 10PM<br/>
+                    Friday: 11:30AM - 11PM<br/>
+                    Saturday: 4 - 11PM<br/>
+                    Sunday: 4 - 10PM
+                </span>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
-    <div id="footer"></div>
+    <div id="footer">
+        <div id="left-info">
+            <div>
+                MON-TUES: 11:30AM-9PM · WED-THURS: 11:30AM-10PM<br/>
+                FRIDAY: 11:30AM-11:00PM · SATURDAY: 4PM-11:00PM<br/>
+                SUNDAY & HOLIDAYS: 4PM-9PM 
+            </div>
+            <a href="">
+                <i class="fas fa-book"></i>
+                book a table
+            </a>
+        </div>
+        <div id="center-info">
+            <div class="icon-group">
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-google"></i>
+            </div>
+            <div>
+                PRIVACY<br/>
+                CAREERS<br/>
+                519-438-4343<br/>
+            </div>
+        </div>
+        <div id="right-info">
+            <div>CONTACT US</div>
+            <div class="input-groups">
+                <input type="text" placeholder="Name"/>
+                <input type="text" placeholder="Email or Phone Number"/>
+                <input type="text" placeholder="Message"/>
+            </div>
+        </div>
+        <div id="sign"><span>© 2018 |</span> A S&W WEBSITE</div>
+    </div>
 </body>
+
 </html>
