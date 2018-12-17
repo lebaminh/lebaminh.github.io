@@ -1,0 +1,11 @@
+@import './config';
+@import './navbar';
+@import './slideShow';
+@import './content';
+@import './footer';
+
+@include resetCss;
+@include navbar;
+@include slideShow;
+@include content;
+@include footer;
