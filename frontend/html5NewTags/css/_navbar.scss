@@ -1,5 +1,103 @@
-@mixin navbar {
-    #navbar{
-        color: $color;
+nav{
+    background-color: $navbar-backgroundColor;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    >ul{
+        display: inline-block;
+        margin: auto;
+        font: {
+            family: 'Open Sans', sans-serif;
+            size: $navbar-fontsizeParent;
+        }
+        li{
+            list-style: none;
+            position: relative;
+            &:hover{
+                >ul{
+                    display: block;
+                }
+            }
+        }
+        >li{
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 50px;
+            > a > img{
+                width: auto;
+                height: 30px;
+                margin-top: 10px;
+            }
+
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $navbar-linkColor;
+                display: block;
+            }
+
+            ul{
+                position: absolute;
+                display: none;
+                z-index: 1000;
+                top: 100%;
+                left: 0;
+                white-space: nowrap;
+                text-align: left;
+                font-size: $navbar-fontsizeChild;
+                padding: 5px 0px;
+                background-color: $navbar-childMenuBackgroundColor;
+                li{
+                    float: none;
+                    height: 25px;
+                    line-height: 25px;
+                    a{
+                        color: $navbar-childLinkColor;
+                        padding: 0 25px;
+                        transition: background-color 0.7s;
+                        &:hover{
+                            background-color: $navbar-childBackgroundHover;
+                        }
+                    }
+                }
+            }
+
+            >.down{
+                color: $navbar-linkColor;
+                position: absolute;
+                left: 50%;
+                bottom: 0px;
+                transform: translateX(-50%);
+                z-index: 1000;
+                font-size: $navbar-iconFontSize;
+            }
+
+            #logo{
+                margin-right: 150px;
+            }
+
+            #redLink{
+                color: $navbar-redLink;
+            }
+
+            &:hover{
+                >a{
+                    text-decoration: underline;
+                }
+            }
+        }
     }
+
+    ul::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+#navbar::after{
+    content: "";
+    clear: both;
+    display: block;
 }

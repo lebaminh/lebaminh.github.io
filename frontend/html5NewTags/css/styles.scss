@@ -3,9 +3,13 @@
 @import './slideShow';
 @import './content';
 @import './footer';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @include resetCss;
-@include navbar;
-@include slideShow;
-@include content;
-@include footer;
+
+body{
+  background-color: aquamarine;
+  font: {
+    family: 'Open Sans', sans-serif;
+  }
+}
