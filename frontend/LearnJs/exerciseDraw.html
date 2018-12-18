@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let printTrigangle = n => {
+      let result = ''
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+          result += ' * '
+        }
+        result += '\n'
+      }
+      return result
+    }
+
+    let printEmptyRectangle = (a, b) => {
+      if (a < 3 || b < 3) return 'param is invalid'
+      let result = ''
+      for (let i = 1; i <= b; i++) {
+        for (let j = 1; j <= a; j++) {
+          if (i === 1 || i === b) {
+            result += '*'
+          } else if (j !== 1 && j !== a) {
+            result += ' '
+          } else {
+            result += '*'
+          }
+        }
+        result += '\n'
+      }
+      return result
+    }
+
+    let printSpecialTrigangle = n => {
+      if (n <= 1) return 'params required 1'
+      let matrix_m = n
+      let matrix_n = 2 * n - 1
+      let result = ''
+      for (let i = 1; i <= matrix_m; i++) {
+        for (let j = 1; j <= matrix_n; j++) {
+          if (j >= i && j <= 2 * n - i) {
+            result += '*'
+          } else {
+            result += ' '
+          }
+        }
+        result += '\n'
+      }
+      return result
+    }
+
+    let printX = n => {
+      if (n <= 3 || n % 2 === 0) return 'param required > 3 and %2 !0'
+      let result = ''
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+          if (j === i || j === n - i + 1) {
+            result += '*'
+          } else {
+            result += ' '
+          }
+        }
+        result += '\n'
+      }
+      return result
+    }
+
+    let printButterfly = n => {
+      if (n <= 3 || n % 2 === 0) return 'param required > 3 and %2 !0'
+      let result = ''
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n; j++) {
+          if (j > i && j < n - i + 1 || j < i && j > n - i + 1) {
+            result += ' '
+          } else {
+            result += '*'
+          }
+        }
+        result += '\n'
+      }
+      return result
+    }
+
+
+    console.log(printTrigangle(5))
+    console.log(printEmptyRectangle(5, 5))
+    console.log(printSpecialTrigangle(5))
+    console.log(printX(5))
+    console.log(printButterfly(5))
+  </script>
+</body>
+
+</html>

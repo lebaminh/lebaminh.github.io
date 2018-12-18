@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      let bai1 = (x, y) => {
+        let result = ''
+        if (isNaN(x) || isNaN(y)) {
+          result = 'params not a number'
+        } else if (x > y) {
+          result = `so lon nhat la ${x}`
+        } else {
+          result = `so lon nhat la ${y}`
+        }
+        return result
+      }
+
+      let bai2 = n => {
+        let result = ''
+        if (isNaN(n)) {
+          result = `param is not a number`
+        } else if (n <= 0) {
+          result = `param required > 0`
+        } else {
+          result = 1
+          let temp = n
+          while (temp>0) {
+            result *= temp
+            temp--
+          }
+          result = `${n}! = ${result}`
+        }
+        return result
+      }
+
+      let bai3 = array => {
+        if (!Array.isArray(array)) {
+          return 'param is not a array'
+        } else if (array.length === 0) {
+          return 'array is not empty'
+        } else {
+          let results = []
+          array.map(value => {
+            if (value % 2 === 0) {
+              results.push(value)
+            }
+          })
+          results = results.sort( (a, b) => b - a)
+          return `Mang duoc sap xep giam dan ${results} `
+        }
+      }
+
+      let bai4 = accountInfo => {
+        if (!accountInfo.username || !accountInfo.password || !accountInfo.confirm) {
+          return `param invalid`
+        } else {
+          let result = []
+          if (accountInfo.username.length > 20) {
+            result = `username invalid`
+          } else if (accountInfo.password.length < 6 || accountInfo.password.length > 8) {
+            result = `password invalid`
+          } else if (accountInfo.password !== accountInfo.confirm) {
+            result = `password not same confirm password`
+          }
+          return result
+        }
+      }
+
+    </script>
+</body>
+
+</html>

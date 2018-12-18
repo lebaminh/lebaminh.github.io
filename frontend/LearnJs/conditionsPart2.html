@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id='result'></div>
+  <script>
+    let printEmptyRectangle = (a, b) => {
+      if (a < 3 || b < 3) return 'param is invalid'
+      let result = ''
+      for (let i = 1; i <= b; i++) {
+        for (let j = 1; j <= a; j++) {
+          if (i === 1 || i === b) {
+            result += '*'
+          } else {
+            if (j !== 1 && j !== a) {
+              result += ' '
+            } else {
+              result += '*'
+            }
+          }
+        }
+        // result = result.slice(0, -1)
+        result += '\n'
+      }
+      console.log(result)
+      return result
+    }
+
+
+    let htmlResult = document.getElementById('result')
+    htmlResult.innerHTML = printEmptyRectangle(4, 4)  
+  </script>
+</body>
+
+</html>
